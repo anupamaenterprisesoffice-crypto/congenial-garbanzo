@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f1f3f4;
+}
+
+#auth {
+  padding: 20px;
+}
+
+.topbar {
+  background: white;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+input, button {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #1a73e8;
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 10px;
+}
+
+.appCard {
+  text-align: center;
+}
+
+.appCard img {
+  width: 70px;
+  border-radius: 15px;
+}
+
+.scroll {
+  display: flex;
+  overflow-x: auto;
+}
+
+.scroll img {
+  width: 80px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.progress {
+  width: 100%;
+  background: #ddd;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.progress div {
+  height: 10px;
+  background: #1a73e8;
+  width: 0%;
+}
