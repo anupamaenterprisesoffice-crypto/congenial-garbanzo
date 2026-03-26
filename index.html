@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>4-Second Store</title>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="auth">
+  <h2>4-Second Store</h2>
+  <input id="username" placeholder="Username">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="signup()">Sign Up</button>
+  <button onclick="login()">Login</button>
+</div>
+
+<!-- APP -->
+<div id="app" style="display:none;">
+
+  <!-- TOP -->
+  <div class="topbar">
+    <input id="search" placeholder="Search apps..." onkeyup="searchApps()">
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button onclick="switchTab('foryou')">For You</button>
+    <button onclick="switchTab('top')">Top Charts</button>
+  </div>
+
+  <!-- HOME -->
+  <div id="home">
+    <h3>🔥 Trending</h3>
+    <div id="trending" class="scroll"></div>
+
+    <h3>📱 Apps</h3>
+    <div id="apps" class="grid"></div>
+  </div>
+
+  <!-- APP PAGE -->
+  <div id="appPage" style="display:none;"></div>
+
+  <!-- UPLOAD -->
+  <div id="upload" style="display:none;">
+    <h3>Upload APK</h3>
+    <input type="file" id="fileInput">
+    <input id="appName" placeholder="App Name">
+    <input id="appIcon" placeholder="Icon URL">
+    <button onclick="uploadAPK()">Upload</button>
+  </div>
+
+  <!-- NAV -->
+  <div class="nav">
+    <button onclick="showHome()">Home</button>
+    <button onclick="showUpload()">Upload</button>
+    <button onclick="deleteAccount()">Delete</button>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
